@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text Editor</title>
+  </head>
+  <body class="text-center container">
+    <main>
+      <h1 class="banner p-3 text-primary">TextEditor</h1>
+      <div class="row">
+        <div class="col">
+          <button
+            id="bold"
+            onclick="makeBold(this)"
+            class="btn btn-light"
+            type="button"
+          >
+            Bold
+          </button>
+          <button
+            id="italic"
+            onclick="makeItalic(this)"
+            class="btn btn-light"
+            type="button"
+          >
+            Italic
+          </button>
+          <button
+            id="underline"
+            onclick="makeUnderline(this)"
+            class="btn btn-light"
+            type="button"
+          >
+            Underline
+          </button>
+          <button id="left-align" class="btn btn-light" type="button">
+            <i class="fas fa-align-left"></i>
+          </button>
+          <button id="center-align" class="btn btn-light" type="button">
+            <i class="fas fa-align-center"></i>
+          </button>
+          <button id="right-align" class="btn btn-light" type="button">
+            <i class="fas fa-align-right"></i>
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="row editor">
+        <div class="col">
+          <div class="form-group">
+            <label for="text-input">Your Document Text</label>
+            <textarea
+              oninput="updateText()"
+              class="form-control"
+              id="text-input"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+        <div class="col">
+          <label for="text-input">Formated Text</label>
+          <div class="bg-light" id="text-output"></div>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
