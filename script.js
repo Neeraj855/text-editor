@@ -19,3 +19,14 @@ function makeUnderline(element) {
   element.classList.toggle("active");
   textOutput.classList.toggle("underline");
 }
+
+function alignText(elem, alignType) {
+  elem.classList.toggle("active");
+  textOutput.style.textAlign = alignType;
+  let buttonList = document.getElementsByClassName("align");
+  for (let i = 0; i < buttonList.length; i++) {
+    buttonList[i].classList.remove("active");
+  }
+
+  elem.classList.add("active");
+}
